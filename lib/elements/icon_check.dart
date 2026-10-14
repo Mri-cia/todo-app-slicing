@@ -1,11 +1,9 @@
-import 'dart:nativewrappers/_internal/vm/lib/ffi_allocation_patch.dart';
-
 import 'package:flutter/material.dart';
 
 class IconCheck extends StatefulWidget {
   const new({super.key, this.onChange});
 
-  final Function()? onChange;
+  final VoidCallback? onChange;
 
   @override
   State<IconCheck> createState() => _IconCheckState();
@@ -18,7 +16,7 @@ class _IconCheckState extends State<IconCheck> {
   void _handleTap() {
     setState(() {
       _isChecked = !_isChecked;
-      widget.onChange;
+      widget.onChange?.call();
     });
   }
 
