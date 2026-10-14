@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.blue),
         brightness: .light,
       ),
-      home: const Login(),
+      home: const TaskView(),
     );
   }
 }
